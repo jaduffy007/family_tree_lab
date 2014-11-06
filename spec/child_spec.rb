@@ -7,21 +7,24 @@ describe Child do
     @child = Child.new("ruby",1,"female")
   end
 
+  # added by me
+
+
   describe "Initialization" do
     it "is an instance of the Child class" do
-
+      expect(@child).to be_instance_of(Child)
     end
     it "is assigned a name" do
-
+      expect(@child.name).to eq("ruby")
     end
     it "is assigned an age" do
-
+      expect(@child.age).to eq(1)
     end
     it "is assigned a gender" do
-
+      expect(@child.gender).to eq("female")
     end
     it "is assigned a favColor" do
-
+      expect(@child.favColor.one?{|color| color == @child.favColor}).to be(true)
     end
     it "should increment the children variable by 1 when created" do
 
